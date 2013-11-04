@@ -1,0 +1,162 @@
+\documentclass{jafm}
+%%
+%%
+% JAFM USE ONLY
+% header info
+\hdvol{1} % volume
+\hdnum{1} % issue number
+\hdpgs{1} % start page
+\hdpge{2} % end page
+\hdyrs{2013} % year
+\issn{8888-8888}
+\eissn{8888-8888}
+% received and accepted dates
+\received_date{December 16, 2012}
+\accepted_date{March 7, 2013}
+%%
+%%
+\begin{document}
+%%
+%%
+\title{A Manuscript Template for JAFM}
+%%
+%%
+% Mark the corresponding author with a dagger: $^{\dagger}$
+\author{
+F. Reynolds\inst{1}$^{\dagger}$ \and 
+S. Johnson\inst{2} \and
+T. Mohammadi\inst{1} }
+%%
+%%
+\institute{First Business or Academic Affiliation 1, City, State, Zip Code, Country \and Second Business or Academic Affiliation 2, City, Province, Zip Code, Country }
+%%
+%%
+\email{CorrespondingAuthor@academic.edu}
+%%
+%%
+\abstract{An abstract of 150-400 words should be included in the paper.  The abstract should be formatted as an unnumbered section and should be one-column. Abstracts are required for all papers. Be sure to define all symbols used in the abstract, and do not cite references in this section.}
+%%
+%%
+\keywords{Keywords should be provided below the Abstract to assist with indexing of the article. These should not duplicate key words from the title. Keywords are separated by 'comma' and a full stop 'dot' at the end. Each keyword starts with a Capital letter, e.g. Computational study, Normalizing technique, Fluid flow.}
+%%
+%%
+\maketitle
+%%
+%%
+\section*{Nomenclature}
+Nomenclature should be in alphabetic order (A--Z) and Greek letters should follow after Latin letters in alphabetic order ($\alpha$--$\omega$).
+
+\begin{tabular}{l l}
+$A$  & amplitude of oscillation \\
+$a$  & cylinder diameter  \\
+$C_{\mu}$  & pressure coefficient \\
+$C_X$  & force coefficient in the x direction \\
+$C_Y$  & force coefficient in the y direction \\
+$c$  & chord \\
+$dt$ & time step \\
+$F_x$ & X component of the resultant pressure force \\
+$F_y$ & Y component of the resultant pressure force \\
+      & acting on the lower side\\
+$f,g$  & generic functions \\
+$h$  & height  \\
+$i$  & time index during navigation \\
+$j$  & space index \\
+$\alpha$  & angle of attack \\
+$\gamma$  & dummy variable \\
+\end{tabular}
+%%
+%%
+\section{Electronic Submission}
+This instruction gives you guidelines for preparing papers for JAFM. All manuscripts are to be submitted online. Use this document as a template if you are using \LaTeX. Carefully follow the journal paper submission process. The full text of the paper (except the abstract and the figures and tables that are given after the references) is formatted in two-column. Manuscripts should be written in clear, concise and grammatically correct English so that they are intelligible to the professional reader who is not a specialist in any particular field. Manuscripts that do not conform to these requirements and the following manuscript format may be returned to the author prior to review for correction.
+%%
+%%
+\section{General Guidelines}
+The following section outlines general (non-formatting) guidelines to follow. These guidelines are applicable to all authors and include information on the policies and practices relevant to the publication of your manuscript.
+%%
+%%
+\subsection{Publication by JAFM}
+Your manuscript cannot be published by JAFM if:
+\begin{enumerate}
+\item
+The work is classified or has not been cleared for public release.
+\item
+The work contains copyright-infringed material.
+\item
+The work has been published or is currently under consideration for publication elsewhere.
+\end{enumerate}
+%%
+%%
+\subsection{Copyright}
+Before JAFM can print or publish any paper, the copyright information must be completed on our Web site. Failure to complete the form correctly could result in your paper not being published.
+
+As you will be completing this form online, you do not need to fill out a hard-copy form. Do not include a copyright statement anywhere on your paper.
+%%
+%%
+\subsection{Title and Author Information}
+For each author, a numbered superscript should be used to indicate institutional affiliation and a symbol footnote mark to refer to author support information (to be included as footnotes at the bottom of the page). 
+
+Following the author information, each institution with which any of the authors are affiliated should be listed, including addresses.
+%%
+%%
+\subsection{Tables and Figures}
+Insert tables and figures within your document either scattered throughout the text or all together at the end of the file. Tables and figures should be numbered consecutively, with captions below the table or figure. Captions should be 10 pt, and centered. Two-column-wide figures and tables may be used as appropriate. Tables should be self-contained and complement, but not duplicate, information contained in the text. Individual numbering of subfigures (using lower-case letters) is also encouraged where appropriate. See the Table 1 example for table style and column alignment. 
+\begin{center}
+\textbf{Table 1 }\textbf{Title of the table}\textbf{}
+\begin{tabular}{|c|c|c|c|} \hline
+ & \multicolumn{2}{|c|}{ Parameters} & \\ \hline
+Cases & $f''$ & $h''$ & results, $cm^2$ \\ \hline
+a  & 0  & 1.5  & 240.416  \\ \cline{1-3}
+b  & 1  & 4.5  & 229.348  \\ \cline{1-3}
+c  & 2  & 85.0  & 562.179  \\ \cline{1-3}
+d  & 0  & 23.5  & 516.527  \\ \hline
+\end{tabular}
+\end{center}
+Place figure captions below all figures. If your figure has multiple parts, include the labels ``a),'' ``b),'' etc., below and to the left of each part, above the figure caption. Please verify that the figures and tables you mention in the text actually exist. When citing a figure in the text, use the abbreviation ``Fig.'' except at the beginning of a sentence. Do not abbreviate ``Table.'' Number each different type of illustration (i.e., figures, tables, images) sequentially with relation to other illustrations of the same type.
+%%
+%%
+\subsection{Equations, Numbers, Symbols, and Abbreviations}
+Equations are centered and numbered consecutively, with equation numbers in parentheses flush right, as in Eq. (1). Insert a blank line on either side of the equation. First use the equation editor to create the equation. 
+A sample equation is included here, formatted using the preceding instructions. To make your equation more compact, you can use the solidus (/) or appropriate exponents when the expression is five or fewer characters.  Use parentheses to avoid ambiguities in denominators.
+\begin{equation}
+\int_0^{r_2} F(r , \phi) dr d\phi = \sigma r_2 (2\mu_{\circ})
+\end{equation}
+Be sure that the symbols in your equation are defined before the equation appears, or immediately following. Italicize symbols (T might refer to temperature, but T is the unit tesla). Refer to ``Eq. (1),'' not ``(1)'' or ``equation (1)'' except at the beginning of a sentence: ``Equation (1) is\ldots'' Equations can be labeled other than ``Eq.'' should they represent inequalities, matrices, or boundary conditions. If what is represented is really more than one equation, the abbreviation ``Eqs.'' can be used.\\
+All the equations must be written in equation or align commands. Do not use eqnarray command for equation or relations.\\
+Moreover, all the equations should be written in two columns.   
+Define abbreviations and acronyms the first time they are used in the main text. Very common abbreviations such as JAFM and SI do not have to be defined. Abbreviations that incorporate periods should not have spaces: write ``P.R.,'' not ``P. R.'' Delete periods between initials if the abbreviation has three or more initials; e.g., U.N. but ESA. Do not use abbreviations in the title unless they are unavoidable.
+\begin{figure}
+  \centering
+  \includegraphics[width=\columnwidth]{LOGO}\\
+  \caption[]{ This is the JAFM logo. }
+  \label{fig:logo}
+\end{figure}
+%%
+%%
+\section{Description of References}
+The following entries are intended to provide examples of the different reference types, in accordance with JAFM style. All references should be in 9-point font.
+
+References to published work should be referred to in the text by the last name(s) of author(s) followed by the year of publication in parentheses. For example, one may write 
+\citeN{sampref1} referred to several existing studies \citeN{sampref2,sampref3,sampref4} 
+or "More information can be found in \shortciteN{sampref3}."  
+
+For unpublished lectures of symposia, include title of paper, name of sponsoring society in full, and date.  Give titles of unpublished reports with "(unpublished)" following the reference.  Only articles that have been published or are in press should be included in the references.  Unpublished results or personal communications should be cited as such in the text.
+
+For periodicals all of the preceding information is required. The journal issue number (``No. 11'' in Ref. 1) is preferred, but the month (Nov.) can be substituted if the issue number is not available. Use the complete date for daily and weekly publications. Transactions follow the same style as other journals; if punctuation is necessary, use a colon to separate the transactions title from the journal title.
+
+Electronic publications, CD-ROM publications and regularly issued, dated electronic journals are permitted as references. Archived data sets also may be referenced as long as the material is openly accessible and the repository is committed to archiving the data indefinitely. References to electronic data available only from personal Web sites or commercial, academic, or government ones where there is no commitment to archiving the data are not permitted in the reference list.
+
+The references should be grouped at the end of the paper in the alphabetical order of the last name of the first author in the following style:
+%%
+%%
+\section{Conclusion}
+Although a conclusion may review the main points of the paper, it must not replicate the abstract. A conclusion might elaborate on the importance of the work or suggest applications and extensions. Do not cite references in the conclusion as all points should have been made in the body of the paper. Note that the conclusion section is the last section of the paper to be numbered. The appendix (if present), acknowledgment, and references are listed without numbers.
+%%
+%%
+\section*{Acknowledgments}
+The Chief Editor of JAFM would like to thank all authors for their contributions and the submission of their papers.
+%%
+%%
+\bibliography{jafm}
+%%
+%%
+\end{document}
