@@ -48,9 +48,10 @@
 \def\hdyrs#1{ \gdef\@hdyrs{#1} }
 \def\issn#1{ \gdef\@issn{#1} }
 \def\eissn#1{ \gdef\@eissn{#1} }
+\def\hdfr#1{ \gdef\@hdfr{#1} }              %%%%%%%%%%%%%%%%%%new line
 \fancypagestyle{plain} {
   \fancyhf{}
-  \fancyhead[L]{ First Author \textit{et al.} / \textbf{JAFM}, 
+  \fancyhead[L]{ \@hdfr \textit{et al.} / \textbf{JAFM}, 
     Vol. \@hdvol, No. \@hdnum, pp. \@hdpgs-\@hdpge, \@hdyrs. }
   \renewcommand{\headrulewidth}{0pt} 
   \fancyfoot[C]{ \thepage }
@@ -191,15 +192,15 @@
 % | Sections |
 % +----------+
 \renewcommand\section{\@startsection {section}{1}{.25in}%
-  {-3.5ex \@plus -1ex \@minus -.2ex}%
-  {2.3ex \@plus.2ex}%
+  {0.42168mm \@plus 0pt \@minus 0pt}% the correct spacing is 12pt or (0.42168mm) before and 6pt after 
+  {0.01pt \@plus 0pt}%%%%%%%%%%%%%%%%%%%%%%%%%As you can see in the outpot the space after does not change according to the command, but if set 0,it will move the text.
   {\normalfont\normalsize\scshape\bfseries}}
-\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
-  {-3.25ex\@plus -1ex \@minus -.2ex}%
-  {1.5ex \@plus .2ex}%
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%% the correct spacing is 12pt or (0.42168mm) before and 6pt after 
+  {0.42168mm \@plus 0pt \@minus 0pt}%
+  {0.01pt\@plus .2ex}%
   {\normalfont\normalsize\bfseries}}
-\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
-  {-3.25ex\@plus -1ex \@minus -.2ex}%
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%% the correct spacing is 6pt or (0.2108mm) before and after. 
+  {0.21084mm\@plus 0pt \@minus 0pt}%
   {1.5ex \@plus .2ex}%
   {\normalfont\normalsize\bfseries}}
 %% add a dot after the section number                                   
@@ -225,4 +226,4 @@
 % +--------------+
 % | Bibliography |
 % +--------------+
-\bibliographystyle{chicago}
+\bibliographystyle{mychicago} %%%%%%%%%%%%%%%%%%%%%%%%%%% I have changed the chicago bibliography style in order to have the et al in italic(in jafm format)
