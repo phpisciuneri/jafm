@@ -191,17 +191,18 @@
 % +----------+
 % | Sections |
 % +----------+
+%\@startsection{<name>}{<level>}{<indent>}{<beforeskip>}{<afterskip>}{<style>}
 \renewcommand\section{\@startsection {section}{1}{.25in}%
-  {0.42168mm \@plus 0pt \@minus 0pt}% the correct spacing is 12pt or (0.42168mm) before and 6pt after 
-  {0.01pt \@plus 0pt}%%%%%%%%%%%%%%%%%%%%%%%%%As you can see in the outpot the space after does not change according to the command, but if set 0,it will move the text.
+  {0.42168mm}% 12 pt
+  {0.2108mm}% 6 pt
   {\normalfont\normalsize\scshape\bfseries}}
-\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%% the correct spacing is 12pt or (0.42168mm) before and 6pt after 
-  {0.42168mm \@plus 0pt \@minus 0pt}%
-  {0.01pt\@plus .2ex}%
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@} 
+  {0.42168mm}% 12 pt
+  {0.2108mm}% 6 pt
   {\normalfont\normalsize\bfseries}}
-\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%% the correct spacing is 6pt or (0.2108mm) before and after. 
-  {0.21084mm\@plus 0pt \@minus 0pt}%
-  {1.5ex \@plus .2ex}%
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}% 
+  {0.2108mm}% 6 pt
+  {0.2108mm}% 6 pt
   {\normalfont\normalsize\bfseries}}
 %% add a dot after the section number                                   
 \renewcommand{\thesection}{\arabic{section}.}
