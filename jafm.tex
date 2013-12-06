@@ -19,6 +19,18 @@
 \begin{document}
 %%
 %%
+%% IMPORTANT NOTE:
+%%
+%%   BEFORE issuing the maketitle command, you must specify 
+%%   - authors with \author{}, 
+%%   - the title with \title{},
+%%   - institutes with \institute{},
+%%   - corresponding email with \email{},
+%%   - the abstract with abstract{},
+%%   - keywords with keywords{}, and 
+%%   - (optionally) nomenclature with \nomenclature{}
+%%
+%%
 \title{A Manuscript Template for JAFM}
 %%
 %%
@@ -41,10 +53,8 @@ T. Mohammadi\inst{1} }
 \keywords{Keywords should be provided below the Abstract to assist with indexing of the article. These should not duplicate key words from the title. Keywords are separated by 'comma' and a full stop 'dot' at the end. Each keyword starts with a Capital letter, e.g. Computational study, Normalizing technique, Fluid flow.}
 %%
 %%
-\maketitle
-%%
-%%
-\section*{Nomenclature}
+\nomenclature{
+% left column
 \begin{tabular}{l l}
 $A$  & amplitude of oscillation \\
 $a$  & cylinder diameter  \\
@@ -54,6 +64,9 @@ $C_Y$  & force coefficient in the y direction \\
 $c$  & chord \\
 $dt$ & time step \\
 $F_x$ & X component of the resultant pressure force \\
+\end{tabular}
+% right column
+\begin{tabular}{l l}
 $F_y$ & Y component of the resultant pressure force \\
       & acting on the lower side\\
 $f,g$  & generic functions \\
@@ -63,6 +76,10 @@ $j$  & space index \\
 $\alpha$  & angle of attack \\
 $\gamma$  & dummy variable \\
 \end{tabular}
+}
+%%
+%%
+\maketitle
 %%
 %%
 \section{Electronic Submission}

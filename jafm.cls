@@ -48,7 +48,7 @@
 \def\hdyrs#1{ \gdef\@hdyrs{#1} }
 \def\issn#1{ \gdef\@issn{#1} }
 \def\eissn#1{ \gdef\@eissn{#1} }
-\def\hdfr#1{ \gdef\@hdfr{#1} }              %%%%%%%%%%%%%%%%%%new line
+\def\hdfr#1{ \gdef\@hdfr{#1} } %% new line
 \fancypagestyle{plain} {
   \fancyhf{}
   \fancyhead[L]{ \@hdfr \textit{et al.} / \textbf{JAFM}, 
@@ -95,9 +95,9 @@
 }
 \def\inst#1{\unskip$^{#1}$}
 
-% +---------------------------+
-% | Title, Abstract, Keywords |
-% +---------------------------+
+% +-----------------------------------------+
+% | Title, Abstract, Keywords, Nomenclature |
+% +-----------------------------------------+
 \def\LOGO {
   \begin{picture}(0,0)\unitlength=1cm
     \put (1,-1) {\includegraphics[scale=1.25]{logo}}
@@ -108,6 +108,10 @@
 \def\email#1{\gdef\@email{#1}}
 \def\abstract#1{\gdef\@abstract{#1}}
 \def\keywords#1{\gdef\@keywords{#1}}
+% nomenclature is optional
+\newif\ifnomenclature
+\nomenclaturefalse
+\def\nomenclature#1{\nomenclaturetrue\gdef\@nomenclature{#1}}
 \renewcommand\maketitle{
   \par
   \begingroup
@@ -137,9 +141,18 @@
       \@abstract
       \vskip12pt
       %% Keywords
-	  {\bfseries Keywords:}
-	  \@keywords
-	  \vskip12pt
+      \textbf{Keywords:}
+      \@keywords
+      \vskip12pt
+      %% Nomenclature (optional)
+      \ifnomenclature{
+        \begin{center}%
+	  {\bfseries \scshape Nomenclature \vspace{-.5em}\vspace{\z@}}%
+        \end{center}%
+        \@nomenclature
+        \vskip12pt
+      }
+      \fi
     \end{@twocolumnfalse}
   ]
   \thispagestyle{empty}\@thanks
@@ -227,4 +240,4 @@
 % +--------------+
 % | Bibliography |
 % +--------------+
-\bibliographystyle{mychicago} %%%%%%%%%%%%%%%%%%%%%%%%%%% I have changed the chicago bibliography style in order to have the et al in italic(in jafm format)
+\bibliographystyle{mychicago} % Mostafaho: changed the chicago bibliography style in order to have the et al in italic (in jafm format)
